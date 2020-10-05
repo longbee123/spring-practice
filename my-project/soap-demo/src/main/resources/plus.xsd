@@ -1,0 +1,27 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://example.com/plus"
+           targetNamespace="http://example.com/plus" elementFormDefault="qualified">
+
+    <xs:element name="GetPlusRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="x" type="xs:int"/>
+                <xs:element name="y" type="xs:int"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="GetPlusResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Result" type="tns:Result"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="Result">
+        <xs:sequence>
+            <xs:element name="result" type="xs:int"/>
+        </xs:sequence>
+    </xs:complexType>
+
+</xs:schema>
